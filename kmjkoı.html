@@ -1,0 +1,108 @@
+<center>
+  <title>
+    by Hazar Genç
+  </title>
+  <style>
+    ::selection {
+      color: white;
+      background-color: black;
+    }
+
+    /* Genel buton stil */
+    .custom-button {
+      background-color: #4CAF50;
+      /* Butonun arkaplan rengi */
+      color: white;
+      /* Yazı rengi */
+      padding: 12px 24px;
+      /* İç boşluk */
+      font-size: 16px;
+      /* Yazı boyutu */
+      font-weight: bold;
+      /* Kalın yazı */
+      border: none;
+      /* Kenarlık yok */
+      border-radius: 8px;
+      /* Yuvarlak köşeler */
+      cursor: pointer;
+      /* İmleç gösterimi */
+      transition: background-color 0.3s ease, transform 0.2s ease;
+      /* Animasyon */
+    }
+
+    /* Hover efekti */
+    .custom-button:hover {
+      background-color: #45a049;
+      /* Üzerine gelince renk değişimi */
+      transform: scale(1.05);
+      /* Biraz büyüme efekti */
+    }
+
+    /* Aktif tıklama efekti */
+    .custom-button:active {
+      background-color: #3e8e41;
+      /* Tıklanınca renk değişimi */
+      transform: scale(0.98);
+      /* Hafif küçülme */
+    }
+  </style>
+  <h1>
+    <pre>
+  Bu site <u><strong>Hazar Genç</strong></u> tarafından gwliştirilmektedir
+  
+  Takipte kalın.
+  </pre>
+    <hr>
+    <h3>
+      Hesap Makinası
+    </h3>
+    <p>1. Sayı: </p><input id="input1" type="text" placeholder="1. Sayı">
+    <br>
+    <p>İşlem Türü: </p><input id="input3" type="text" placeholder="İşlem Türü ( +,- , x, : )">
+    <br>
+    <p>2. Sayı: </p><input id="input2" type="text" placeholder="2. Sayı">
+    <br><br>
+    <button class="custom-button" onclick="hesapla()">Hesapla</button>
+
+    <p id="sonuc">Sonuç</p>
+
+    <script>
+      function hesapla() {
+        if (String(document.getElementById("input3").value) == "+") {
+          document.getElementById("sonuc").innerText = ("Sonuç : " + (Number(document.getElementById("input1").value) + Number(document.getElementById("input2").value)))
+        }
+        else if (String(document.getElementById("input3").value) == "-") {
+          document.getElementById("sonuc").innerText = ("Sonuç : " + (Number(document.getElementById("input1").value) - Number(document.getElementById("input2").value)))
+        }
+        else if (String(document.getElementById("input3").value) == "x") {
+          document.getElementById("sonuc").innerText = ("Sonuç : " + (Number(document.getElementById("input1").value) * Number(document.getElementById("input2").value)))
+        }
+        else if (String(document.getElementById("input3").value) == ":") {
+          document.getElementById("sonuc").innerText = ("Sonuç : " + (Number(document.getElementById("input1").value) / Number(document.getElementById("input2").value)))
+        } else {
+          document.getElementById("sonuc").innerText = "Lütfen işlem türünü +,-,x, veya : şeklinde girin"
+        }
+
+      }
+    </script>
+    <br>
+    <hr>
+    <h1>
+      Kelime Tahmin Oyunu
+    </h1>
+
+    <p>Toplamda 5 canınız var ve 1 ile 30 arasındakileri tahmin etmeye çalışın (1 ile 30 dahil)</p>
+    <input placeholder="Sayınızı girin" id="tahmin""><br><p>Sonuç</p><br>
+    <button class=" custom-button" onclick="tahmin()">Tahmin Et</button>
+    <script>
+      can = 5
+      function rasgeleSayi() {
+        return Math.floor(Math.random() * 30) + 1;
+      }
+      function tahmin(){
+        if (can == 0)
+      }
+      rasgeleSayi()
+
+    </script>
+</center>
